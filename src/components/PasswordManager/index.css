@@ -1,0 +1,219 @@
+.container {
+  background-color: #9ba9eb;
+  padding: 20px;
+}
+.logo-img {
+  height: 50px;
+  width: 130px;
+  margin-bottom: 20px;
+}
+.password-manager-container {
+  background-color: #5763a5;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.password-manager-img-container {
+  text-align: center;
+}
+.password-manager-img {
+  height: 250px;
+  width: 250px;
+  margin-bottom: 15px;
+}
+.password-manager-input-box {
+  background-color: #454f84;
+  border-radius: 10px;
+  padding: 10px;
+  width: 290px;
+  margin: auto;
+}
+
+.password-manager-title {
+  font-family: 'Roboto';
+  color: white;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.website-input-img {
+  height: 20px;
+  width: 22px;
+}
+.website-input {
+  width: 100%;
+  outline: none;
+  border: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Roboto';
+  font-weight: 600;
+}
+.website-input-box {
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 40px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.website-input-img-box {
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: #94a3b8;
+  width: 50px;
+}
+.submit-btn {
+  background-color: #0b69ff;
+  color: white;
+  border-width: 0px;
+  height: 30px;
+  width: 70px;
+  border-radius: 5px;
+}
+.submit-container {
+  text-align: right;
+}
+@media screen and (min-width: 500px) {
+  .password-manager-input-box {
+    width: 350px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .password-manager-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .responsive-container {
+    width: 80%;
+    max-width: 1000px;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+  }
+  .password-manager-input-box {
+    order: 0;
+    margin: 5px;
+    height: 300px;
+    width: 380px;
+  }
+  .password-manager-img-container {
+    order: 1;
+  }
+  .password-manager-img {
+    height: 350px;
+    width: 350px;
+  }
+  .website-input-box {
+    height: 45px;
+    margin-bottom: 25px;
+  }
+}
+
+.passwords-container {
+  background-color: #5763a5;
+  border-radius: 10px;
+  padding: 20px;
+}
+.passwords-container-title {
+  color: white;
+  font-family: 'Roboto';
+  font-weight: 600;
+  font-size: 14px;
+  margin-right: 10px;
+}
+.passwords-count {
+  color: white;
+  font-family: 'Roboto';
+  font-weight: 600;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  text-align: center;
+  border-radius: 10px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.search-img {
+  height: 16px;
+  width: 16px;
+}
+.search-bar {
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 25px;
+  border-radius: 5px;
+}
+.search-input {
+  border: none;
+  outline: none;
+  width: 90px;
+}
+.searchbar-img-box {
+  height: 25px;
+  width: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: #94a3b8;
+}
+.passwords-title-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.title-count-box {
+  flex-grow: 1;
+}
+@media screen and (min-width: 768px) {
+  .search-input {
+    width: 180px;
+  }
+}
+.divider {
+  background-color: #0ea5e9;
+}
+.show-passwords {
+  font-family: 'Roboto';
+  font-weight: 500;
+  color: white;
+  margin-left: 5px;
+}
+.showpasswords-container {
+  text-align: right;
+}
+.show-passwords-img {
+  height: 200px;
+  width: 200px;
+}
+.no-passwords-container {
+  text-align: center;
+}
+.passwords-list {
+  list-style-type: none;
+  padding-left: 0px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}

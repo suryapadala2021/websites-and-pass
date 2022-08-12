@@ -1,0 +1,64 @@
+.list-item {
+  width: 100%;
+  border-style: solid;
+  border-color: #b6c3ca;
+  border-radius: 10px;
+  border-width: 1px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+}
+.surname {
+  color: white;
+  font-weight: 500;
+  font-size: 24px;
+}
+.surname-box {
+  background-color: #f97316;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  flex-direction: column;
+  border-radius: 30px;
+  margin-right: 10px;
+}
+.show-passwords {
+  font-family: 'Roboto';
+  font-weight: 500;
+  color: white;
+  margin-left: 5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.del-btn {
+  background-color: transparent;
+  border-width: 0px;
+}
+.del-img {
+  height: 25px;
+  width: 25px;
+}
+.list-content {
+  flex-grow: 1;
+}
+@media screen and (min-width: 768px) {
+  .list-item {
+    width: 330px;
+    margin: 10px;
+  }
+}
+.A {
+  background-color: #b91c1c;
+}
+.B {
+  background-color: #0ea5e9;
+}
+.c {
+  background-color: #64748b;
+}
+.d {
+  background-color: #14b8a6;
+}
