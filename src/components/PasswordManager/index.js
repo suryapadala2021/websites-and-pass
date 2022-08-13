@@ -52,6 +52,14 @@ class PasswordManager extends Component {
     }))
   }
 
+  filterList = () => {
+    const {websitesList, search} = this.state
+    const filtered = websitesList.filter(obj =>
+      obj.websiteName.toLowerCase().includes(search.toLowerCase()),
+    )
+    return filtered
+  }
+
   show = () => {
     this.setState(prev => ({showPass: !prev.showPass}))
   }
@@ -66,9 +74,7 @@ class PasswordManager extends Component {
       search,
     } = this.state
 
-    const searchResult = websitesList.filter(
-      obj => obj.websiteName.toLowerCase() === search.toLowerCase(),
-    )
+    const getFiltered = this.filterList()
     return (
       <div className="container">
         <div className="responsive-container">
@@ -133,7 +139,7 @@ class PasswordManager extends Component {
                     onChange={this.changePassWord}
                     placeholder="Enter Password"
                     className="website-input"
-                    type="text"
+                    type="password"
                   />
                 </div>
                 <div className="submit-container">
@@ -147,10 +153,8 @@ class PasswordManager extends Component {
           <div className="passwords-container">
             <div className="passwords-title-box">
               <div className="title-count-box">
-                <span className="passwords-container-title">
-                  Your Passwords
-                </span>
-                <span className="passwords-count">{websitesList.length}</span>
+                <h1 className="passwords-container-title">Your Passwords</h1>
+                <p className="passwords-count">{websitesList.length}</p>
               </div>
               <div className="search-bar">
                 <div className="searchbar-img-box">
@@ -161,7 +165,7 @@ class PasswordManager extends Component {
                   />
                 </div>
                 <input
-                  value={this.search}
+                  value={search}
                   onChange={this.onSearch}
                   type="search"
                   className="search-input"
@@ -173,10 +177,10 @@ class PasswordManager extends Component {
             <div className="showpasswords-container">
               <input id="checkBox" type="checkbox" onClick={this.show} />
               <label htmlFor="checkBox" className="show-passwords">
-                ShowPasswords
+                Show passwords
               </label>
             </div>
-            {searchResult.length === 0 && (
+            {getFiltered.length === 0 && (
               <div className="no-passwords-container">
                 <img
                   className="show-passwords-img"
@@ -186,13 +190,14 @@ class PasswordManager extends Component {
                 <p className="show-passwords">No Passwords</p>
               </div>
             )}
-            {searchResult.length !== 0 && (
+            {getFiltered.length !== 0 && (
               <ul className="passwords-list">
-                {searchResult.map(obj => (
+                {getFiltered.map(obj => (
                   <PasswordItem
                     key={obj.id}
                     details={obj}
                     onDelete={this.onDelete}
+                    showPass={showPass}
                   />
                 ))}
               </ul>

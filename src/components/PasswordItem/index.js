@@ -1,7 +1,7 @@
 import './index.css'
 
 const PasswordItem = props => {
-  const {details, onDelete, show} = props
+  const {details, onDelete, showPass} = props
   const {id, websiteName, user, password} = details
 
   const click = () => {
@@ -17,10 +17,16 @@ const PasswordItem = props => {
       <div className="list-content">
         <p className="show-passwords">{websiteName}</p>
         <p className="show-passwords">{user}</p>
-        {show && <p className="show-passwords">{password}</p>}
-        {!show && <p className="show-passwords">{password}</p>}
+        {showPass && <p className="show-passwords">{password}</p>}
+        {!showPass && (
+          <img
+            className="stars"
+            src="https://assets.ccbp.in/frontend/react-js/password-manager-stars-img.png"
+            alt="stars"
+          />
+        )}
       </div>
-      <button type="button" className="del-btn" onClick={click}>
+      <button testid="delete" type="button" className="del-btn" onClick={click}>
         <img
           className="del-img"
           src="https://assets.ccbp.in/frontend/react-js/password-manager-delete-img.png"

@@ -8,6 +8,7 @@
   justify-content: flex-start;
   align-items: center;
   padding: 10px;
+  margin-bottom: 10px;
 }
 .surname {
   color: white;
@@ -47,6 +48,15 @@
 @media screen and (min-width: 768px) {
   .list-item {
     width: 330px;
+    margin: 10px;
+  }
+}
+.stars {
+  width: 70px;
+}
+@media screen and (min-width: 900px) {
+  .list-item {
+    width: 280px;
     margin: 10px;
   }
 }
